@@ -1,0 +1,88 @@
+---
+layout: default
+title: Work
+permalink: /work
+class: work
+---
+
+<section class="section-header">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-8 col-lg-7 col-xl-7">
+        <H6>&lt; CLIENTS WHO BELIEVE US /&gt;</H6>
+        <H1>Our Work</H1>
+        <p>
+          G Suite (formerly Google Apps for Work) are intuitive, highly-collaborative, and functional tools that improve your business’ daily operations.
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 col-md-8">
+        <div class="client-box-list">
+          <div class="client-box">
+            <img src="{{ "assets/images/client-globe.png" | relative_url }}" alt="" />
+          </div>
+          <div class="client-box">
+            <img src="{{ "assets/images/client-ibm.png" | relative_url }}" alt="" />
+          </div>
+          <div class="client-box">
+            <img src="{{ "assets/images/client-cisco.png" | relative_url }}" alt="" />
+          </div>
+          <div class="client-box">
+            <img src="{{ "assets/images/client-smart.png" | relative_url }}" alt="" />
+          </div>
+          <div class="client-box">
+            <img src="{{ "assets/images/client-accenture.png" | relative_url }}" alt="" />
+          </div>
+          <div class="client-box">
+            <img src="{{ "assets/images/client-pal.png" | relative_url }}" alt="" />
+          </div>
+          <div class="client-box">
+            <img src="{{ "assets/images/client-samsung.png" | relative_url }}" alt="" />
+          </div>
+          <div class="client-box">
+            <img src="{{ "assets/images/client-hp.png" | relative_url }}" alt="" />
+          </div>
+        </div>
+        <a href="#" class="btn -primary mt30 video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/zWNF2MwoX9M" data-target="#myModal">
+          <img src="{{ "assets/images/ico-play.svg" | relative_url }}" class="ico" alt="" /> What our clients have to say
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-work">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="section-title">
+          <H6>
+            &lt; CLIENTS WHO BELIEVE US /&gt;
+          </H6>
+          <H2>Our Recent Work</H2>
+          <img class="bg" src="{{ "assets/images/title-work.png" | relative_url }}" alt="" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="auto-1200">
+    <div class="row no-gutters mt50">
+
+      {% for work in site.categories.works %}
+
+        <div class="col-xs-12 col-sm-6">
+          <a href="{{ work.url }}" class="card-work">
+            <img class="img-fluid" src="{{ work.image | relative_url }}" alt="" />
+            <span class="content">
+              <H6>[ {{ work.service }} ]</H6>
+              <H3>{{ work.title }}</H3>
+            </span>
+          </a>
+        </div>
+
+      {% endfor %}
+
+    </div>
+  </div>
+</section>
